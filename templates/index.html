@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solomon's Friendly Text Moderation Sample</title>
+        <link href="/static/css/main.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+    <body>
+        <h1>Solomon's Friendly Text Moderation Sample</h1>
+        <form method="post">
+            <label for="MessageTextarea">Enter Text:</label>
+            <textarea name="text" id="MessageTextarea" rows="2" cols="100" required></textarea>
+            <label for="SaferDropdown">Personalize Safer Value: (larger value is less safe)</label>
+            <select name="saferValue" id="SaferDropdown">
+                <option value="0.005">0.005</option>
+                <option value="0.01">0.01</option>
+                <option value="0.015">0.015</option>
+                <option value="0.02">0.02</option>
+                <option value="0.025">0.025</option>
+                <option value="0.03">0.03</option>
+                <option value="0.035">0.035</option>
+                <option value="0.04">0.04</option>
+                <option value="0.045">0.045</option>
+                <option value="0.05">0.05</option>
+                <option value="0.055">0.055</option>
+                <option value="0.06">0.06</option>
+                <option value="0.065">0.065</option>
+                <option value="0.07">0.07</option>
+                <option value="0.075">0.075</option>
+                <option value="0.08">0.08</option>
+                <option value="0.085">0.085</option>
+                <option value="0.09">0.09</option>
+                <option value="0.095">0.095</option>
+                <option value="0.1">0.1</option>
+            </select>
+            <button type="submit">Moderate</button>
+        </form>
+        {% if result %}
+        <img src="{{ result[0].plot }}" />
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,10 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+textarea,
+select,
+button {
+  display: block;
+  margin: 10px 0;
+}
